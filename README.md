@@ -1,9 +1,23 @@
-# PWCN
+# PWCN Advanced Machine Learning Course
 
-**PWCN** - **P**roximity-**W**eighted **C**onvolution **N**etwork
-* Repo for [SIGIR 2019](https://sigir.org/sigir2019/
-) paper titled "[Syntax-Aware Aspect-Level Sentiment Classification with Proximity-Weighted Convolution Network](https://arxiv.org/abs/1909.10171)" 
-* [Chen Zhang](https://genezc.github.io), [Qiuchi Li](https://qiuchili.github.io) and Dawei Song.
+## Docker Image
+
+If you want to run this program easily, you can Docker Container instead. 
+
+## Docker Image
+
+There is a Docker Image created to run this model easily. You can pull the image here 
+
+```
+docker pull auliadil/pwcn
+```
+
+In order to run this docker image, just run 
+1. `docker run -d --name pwcn auliadil/pwcn:inovasi`
+2. Go to docker image terminal with `docker exec -ti pwcn \bin\bash`
+3. Run `conda activate myenv`
+4. Then, you can run the `python train.py --model_name pwcn_dep --dataset laptop` command
+
 
 ## Requirements
 
@@ -17,7 +31,7 @@
 * Download pretrained GloVe embeddings with this [link](http://nlp.stanford.edu/data/wordvecs/glove.840B.300d.zip) and extract `glove.840B.300d.txt` into `glove/`.
 * Train with command, optional arguments could be found in [train.py](/train.py)
 ```bash
-python train.py --model_name pwcn_dep --dataset restaurant16
+python train.py --model_name pwcn_dep --dataset restaurant
 ```
 * Infer with [infer.py](/infer.py)
 
