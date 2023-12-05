@@ -18,6 +18,9 @@ In order to run this docker image, just run
 3. Run `conda activate myenv`
 4. Then, you can run the `python train.py --model_name pwcn_dep --dataset laptop` command
 
+## Dataset
+
+The datasets are in the `datasets` folder
 
 ## Requirements
 
