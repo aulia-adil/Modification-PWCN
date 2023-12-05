@@ -60,6 +60,7 @@ if __name__ == '__main__':
         'lstm': 'state_dict/lstm_'+dataset+'.pkl',
         'pwcn_pos': 'state_dict/pwcn_pos_'+dataset+'.pkl',
         'pwcn_dep': 'state_dict/pwcn_dep_'+dataset+'.pkl',
+        # 'our_pwcn_dep': 'state_dict/pwcn_dep_'+dataset+'.pkl',
     }
     input_colses = {
         'lstm': ['text_indices'],
@@ -79,7 +80,7 @@ if __name__ == '__main__':
     opt.device = torch.device('cpu')
 
     inf = Inferer(opt)
-    t_probs = inf.evaluate('He not only makes his own homemade mozarella, but every pie is ultra fresh.', 'fresh')    
+    t_probs = inf.evaluate('great food but the service was dreadful', 'food')    
 
     print(t_probs)
     print(t_probs.argmax(axis=-1))

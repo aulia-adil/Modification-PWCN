@@ -46,4 +46,3 @@ def dependency_dist_func(text, aspect_term):
                 dist_matrix[j][i] = seq_len/2
     dist_matrix = np.min(dist_matrix, axis=1)
     return dist_matrix
-
